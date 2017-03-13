@@ -1,0 +1,116 @@
+<!-- Wrapper-->
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar-default navbar-static-side" role="navigation" >
+        <div class="sidebar-collapse">
+            <ul side-navigation class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="profile-element" uib-dropdown>
+                        <a uib-dropdown-toggle="" href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                     <!-- aqui vai o logo da clinica -->
+                                    <strong class="font-bold">{{cliStorage.owner.attributes.firstname}}</strong>
+                                     
+                                    <p ng-if="session.attributes.role == 'owner'" style="font-weight: 300">{{cliStorage.owner.attributes.lastname}}</p>
+                                    
+                                    <p ng-if="session.attributes.role != 'owner'" style="font-weight: 300">{{session.attributes.firstname}} {{session.attributes.lastname}}</p>
+                             </span>
+                                <span ng-if="session.attributes.role == 'owner'" class="text-muted text-xs block">Configure seu App<b class="caret"></b></span>
+                            </span>
+                        </a>
+
+                        <ul ng-if="session.attributes.role == 'owner'" uib-dropdown-menu class="animated flipInX m-t-xs">
+
+                            <li ui-sref-active="active">
+                                <a ui-sref="index.info"><span class="nav-label">Informações</span></a>
+                            </li>
+                            <li ui-sref-active="active">
+                                <a ui-sref="index.subsidiary"><span class="nav-label">Unidades</span></a>
+                            </li>
+
+                            <li ui-sref-active="active">
+                                <a ui-sref="index.modules"><span class="nav-label">Módulos</span></a>
+                            </li>
+                               
+                            <li ui-sref-active="active">
+                                <a ui-sref="index.covenants"><span class="nav-label">Convênios</span></a>
+                            </li>
+                            <!-- colocar aqui menu relacionado ao usuario-->
+                        </ul>
+                    </div>
+
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+               
+                <li ui-sref-active="active">
+                    <a ui-sref="index.main"><i class="fa fa-info"></i> <span class="nav-label">Home</span></a>
+                </li>
+                 <li ui-sref-active="active">
+                    <a ui-sref="index.report"><i class="fa fa-money"></i> <span class="nav-label">conversor</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+        <!-- Page wrapper -->
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation">
+                <div class="navbar-header">
+                    <span minimaliza-sidebar></span> 
+                    <form role="search" class="navbar-form-custom" method="post" action="">
+                        <!-- <div class="form-group">
+                            <input type="text" placeholder="Pesquisar..." class="form-control" name="top-search" id="top-search">
+                        </div> -->
+                    </form>
+                </div>
+
+                <ul class="nav navbar-top-links navbar-right" ng-controller="PublicController as logout">
+                    <li>
+                        <a href="" ng-click="logout.logout()" style="color: darkgray;">
+                            <i class="fa fa-sign-out"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+<!--
+         Main view  
+        <spinner name="mySpinner" show="spinner"></spinner>  
+--><div  ng-show="spinner" class="placeforspinner" style="    position: absolute; width: 100%;  height: 100%;background-color: rgba(250,250,250,0.65); z-index: 100; margin-left: -15px;">
+        	<div class="sk-spinner sk-spinner-wave" style=" z-index: 100;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                <div style="background:#4279a8; margin-right: 2px;" class="sk-rect1"></div>
+                                <div style="background:#4279a8; margin-right: 2px;" class="sk-rect2"></div>
+                                <div style="background:#4279a8; margin-right: 2px;" class="sk-rect3"></div>
+                                <div style="background:#4279a8; margin-right: 2px;" class="sk-rect4"></div>
+<!--                                <div style="background:#4279a8; margin-right: 2px;" class="sk-rect5"></div>-->
+         </div>
+		  
+        </div>
+        
+        <div ui-view></div>
+<!-- <toaster-container toaster-options="{'toaster-id': 1, 
+    'animation-class': 'toast-top-left'}"></toaster-container> -->
+    <toaster-container toaster-options="{
+    'animation-class': 'toast-top-left','time-out': 3000}"></toaster-container>
+        <!-- Footer -->
+        <div class="footer">
+            <!-- <div class="pull-right">
+                10GB of <strong>50GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2015-2016
+            </div> -->
+        </div>
+    </div>
+    <!-- End page wrapper-->
+</div>
+<!-- End wrapper-->

@@ -1,0 +1,66 @@
+<nav class="navbar-default navbar-static-side" role="navigation" >
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="profile-element" uib-dropdown>
+                    <a uib-dropdown-toggle="" href>
+                            <span class="clear">
+                                <span class="block m-t-xs">
+                                     <!-- aqui vai o logo da clinica -->
+                                    <strong class="font-bold">{{currentUser.firstname}}</strong>
+                                    <p style="font-weight: 300">{{currentUser.lastname}}</p>
+                             </span>
+                                <span class="text-muted text-xs block">Configure seu App<b class="caret"></b></span>
+                            </span>
+                    </a>
+                    <ul uib-dropdown-menu class="animated flipInX m-t-xs">
+
+                        <li ui-sref-active="active">
+                            <a ui-sref="index.info"><span class="nav-label">Info</span></a>
+                        </li>
+
+                        <li ui-sref-active="active">
+                            <a ui-sref="index.menu"><span class="nav-label">Menu</span></a>
+                        </li>
+
+                        <li ui-sref-active="active">
+                            <a ui-sref="index.home"><span class="nav-label">Home</span></a>
+                        </li>
+
+                        <li ui-sref-active="active">
+                            <a ui-sref="index.rotina"><span class="nav-label">Rotina</span></a>
+                        </li>
+                        <!-- colocar aqui menu relacionado ao usuario-->
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+
+
+
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="index.main"><i class="fa fa-laptop"></i> <span class="nav-label">Dashboard</span> </a>
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="index.minor"><i class="fa fa-desktop"></i> <span class="nav-label">Clientes</span></a>
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="index.minor"><i class="fa fa-desktop"></i> <span class="nav-label">Mensagens</span></a>
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="index.minor"><i class="fa fa-desktop"></i> <span class="nav-label">Publicidade</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.minor"><i class="fa fa-desktop"></i> <span class="nav-label">News</span></a>
+            </li>
+        </ul>
+
+    </div>
+</nav>

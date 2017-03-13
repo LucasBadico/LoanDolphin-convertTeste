@@ -1,0 +1,66 @@
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">IN+</h1>
+
+            </div>
+            <h3>Register to IN+</h3>
+            <p>Create account to see it in action.</p>
+            <form class="m-t" name="myform"
+              ng-submit="singup.register()"
+              novalidate>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Empresa" >
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nome" name="firstname" ng-model="singup.user.firstname" ng-required="true">
+                    <p class="error validationerror"
+                       ng-show="myform.firstname.$invalid && myform.firstname.$touched">
+                        Nome é obrigatório</p>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Sobrenome"
+                      name="lastname" ng-model="singup.user.lastname" ng-required="true">
+                    <p class="error validationerror"
+                       ng-show="myform.lastname.$invalid && myform.lastname.$touched">
+                        Sobrenome é obrigatório</p>
+                </div> 
+                
+                <div class="form-group">
+                    <input id="Tel" type="tel" class="form-control" placeholder="tel" 
+                     name="tel" ng-model="singup.user.tel" ng-required="true">
+                    <p class="error validationerror"
+                       ng-show="myform.tel.$invalid && myform.tel.$touched">
+                        Telefone é obrigatório</p>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email"
+                   name="email" ng-model="singup.user.email" ng-required="true">
+                    <p class="error validationerror"
+                       name="password" ng-show="myform.email.$invalid && myform.email.$touched">
+                        Email Inválido</p>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" ng-model="singup.user.password" ng-required="true">
+                    <p class="error validationerror"
+                       ng-show="myform.password.$invalid && myform.email.$touched">
+                        Password é obrigatória</p>
+                </div>
+                
+                <div class="form-group">
+                        <div class="checkbox i-checks"><label> <div class="icheckbox_square-green" style="position: relative;"><input ng-model="myform.terms" ng-required="true" type="checkbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background-color: rgb(255, 255, 255); border: 0px; opacity: 0; background-position: initial initial; background-repeat: initial initial;"></ins></div><i></i> Agree the terms and policy </label></div>
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b" ng-disabled="myform.$invalid && myform.terms">Register</button>
+
+                <p class="text-muted text-center"><small>Already have an account?</small></p>
+                <a class="btn btn-sm btn-white btn-block" href="#/public/login">Login</a>
+            </form>
+            <!--<p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 © 2014</small> </p>-->
+        </div>
+    </div>
+
+   

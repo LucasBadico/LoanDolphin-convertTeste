@@ -1,0 +1,60 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-xs-9">
+                    <h2>Users - X-app teste </h2>
+                    <ol class="breadcrumb">
+                        <li>
+                           Teste de angular
+                        </li>
+                    </ol>
+                    
+                    
+                </div>
+                
+</div>
+
+    <div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row">
+        <div class="col-lg-12">
+   
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title" style="height:60px">
+                            <h5><i class="fa fa-calendar-check-o"></i>&nbsp;Página 
+                    <i class="fa fa-angle-left" ng-click="prev()"  style="    font-size: 28px; padding-left: 10px; padding-right: 10px; background-color: #124c7e; color: white;  margin-left: 10px; margin-right: 10px;cursor:pointer;"></i> 
+                    	<span style="color:#000;font-size:18px;">{{page}}  </span>
+                    <i class="fa fa-angle-right" ng-click="next()" style="  font-size: 28px; padding-left: 10px; padding-right: 10px; background-color: #124c7e; color: white;  margin-left: 10px;cursor:pointer;"></i></h5>
+                        </div>
+                        <div class="ibox-content">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <td><strong>Nome</strong></td>
+                                      
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                <!-- repeat -->
+                                    <tr ng-repeat="item in user.data.data">
+                                        <td>
+                                            {{item.name.split(' ')[0].slice(0,1).toUpperCase()}}{{item.name.split(' ')[0].slice(1)}} {{item.name.split(' ')[1].slice(0,1).toUpperCase()}} <span ng-if="item.name.split(' ')[1]">.</span>
+                                        </td>
+                                        
+<!--                                        <td style="vertical-align: middle;">-->
+											<!--  colocar botoes aqui	-->
+<!--                                        </td>-->
+                                    </tr>
+                                <!-- esse bloco -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

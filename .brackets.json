@@ -1,0 +1,18 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/macbook1/Documents/Repositorio/A2/app_alpha/front/clinica/www/js/controllers.js",
+        "/Users/macbook1/Documents/Repositorio/A2/app_alpha/front/clinica/www/lib/ionic/js/ionic.min.js",
+        "/Users/macbook1/Documents/Repositorio/A2/app_alpha/front/clinica/www/lib/ionic/js/ionic.js",
+        "/Users/macbook1/Documents/Repositorio/A2/app_alpha/front/clinica/www/service-worker.js",
+        "/Users/macbook1/Documents/Repositorio/A2/app_alpha/front/clinica/www/lib/ionic/js/ionic.bundle.min.js",
+        "/Users/macbook1/Documents/Repositorio/A2/app_alpha/front/clinica/components/controllers/success.js"
+    ],
+     "brackets-file-tree-exclude.excludeList": [
+        "/.git/",
+        "/dist/",
+        "/bower_components/",
+        "/node_modules/",
+         "/.tmp/",
+         "/e2e/"
+    ]
+}

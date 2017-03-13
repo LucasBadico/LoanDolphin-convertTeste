@@ -1,0 +1,75 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+
+    <div class="row">
+       
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5><i class="fa fa-money" aria-hidden="true"></i>&nbsp; Conversor</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="filters">
+                                <form ng-submit="genReport()">
+                                    <label><b>Converta</b></label>
+                                    <div class="row">
+                                        <div class="form-group col-lg-4">
+                                            <select class="form-control" ng-model="data.origem" ng-change="getRates()">
+                                                <option value="" disabled selected>da origem</option>
+                                                <option ng-repeat="coin in coins"  value="{{coin}}" >{{coin}}</option>
+
+                                                <option value="">não selecionado</option>
+                                                
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-lg-4">
+                                            <select class="form-control" ng-model="data.destino" >
+                                                <option value="" disabled selected>para o destino</option>
+                                                <option ng-repeat="coin in coins"  value="{{coin}}" >{{coin}}</option>
+                                                
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-lg-3">
+                                             <input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="data.valor" ng-change="proccess()" placeholder="Valor">
+                                             
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                       
+<!--
+                                        <div class="form-group col-xs-5">
+                                   		 <label><b>opcional</b> Escolha uma data</label>
+                                           
+                                            <div class="input-group">
+                                                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                <datepicker>
+                                                <input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="data.begin" ng-change="clearMonth()" placeholder="data">
+                                                </datepicker>
+                                            </div>
+                                        </div>
+-->
+                                        
+                                         <div class="form-group col-xs-7">
+											 <label><b>Resultado</b></label>
+                                            
+                                             <input type="text" class="form-control" aria-describedby="basic-addon1" ng-model="data.result" placeholder="Resultado">
+                                             
+                                        </div>
+
+                                        
+                                    </div>
+
+                                   
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
